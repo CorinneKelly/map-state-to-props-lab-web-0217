@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import { addUser } from '../actions/users';
+import React, { Component } from 'react'
+import { addUser } from '../actions/users'
 
 class UserInput extends Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     
     this.state = {
       userName: '', 
       hometown: ''
-    };
+    }
   }
 
   handleOnUserNameChange(event) {
     this.setState({
       userName: event.target.value
-    });
+    })
   }
 
   handleOnHometownChange(event) {
     this.setState({
       hometown: event.target.value
-    });
+    })
   }
 
   handleOnSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
     
     this.props.store.dispatch(addUser(this.state))
   }
@@ -51,4 +51,4 @@ class UserInput extends Component {
   }
 }
 
-export default UserInput;
+export default UserInput
